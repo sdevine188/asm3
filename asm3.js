@@ -59,6 +59,7 @@ $(document).ready(function(){
 	  }
 	  // return the results so they can be used by the next function
 	  x = results
+	  alert("this worked")
 	  return results;
 	}
 
