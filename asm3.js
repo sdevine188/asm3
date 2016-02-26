@@ -264,7 +264,7 @@ $(document).ready(function(){
 
 	$.ajax({
 		type: "GET",
-		url: "census_fips_state_county.csv"
+		url: "census_fips_state_county.csv",
 		dataType: "text"
 	}).done(function(response) {
 		// console.log(response)
