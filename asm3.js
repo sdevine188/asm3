@@ -273,10 +273,14 @@ $(document).ready(function(){
 			console.log("Papa parse finished")
 			console.log(results)
 			csv_output = results
-			console.log("try printing first array")
-			console.log(results[1])
-			console.log("try 2 printing first array")
-			console.log(results[1][1])
+			// console.log("try printing first array")
+			// console.log(results[1])
+			// console.log("try 2 printing first array")
+			// console.log(results[1][1])
+			console.log("try 3 printing first array")
+			console.log(results.data)
+			console.log("try 4 printing first array")
+			console.log(results.data[1])
 			}
 		})
 	}).fail(function(response) {
