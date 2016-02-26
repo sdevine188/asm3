@@ -1,4 +1,5 @@
 var x = []
+var csv
 
 $(document).ready(function(){
 
@@ -253,9 +254,6 @@ $(document).ready(function(){
   		graph_naics($(this).val())
 	})
 
-	var url = "https://sdevine188.github.io/asm3/census_fips_state_county.csv"
-	var file = "census_fips_state_county.csv"
-
 
 	// Papa.parse(file, {
 	// complete: function(results) {
@@ -268,18 +266,18 @@ $(document).ready(function(){
 		dataType: "text"
 	}).done(function(response) {
 		// console.log(response)
-		x = response
+		csv = response
 		Papa.parse(x, {
 			complete: function(results) {
 			console.log("Papa parse finished")
 			console.log(results)
-			x = response
+			csv = response
 			}
 		})
 	}).fail(function(response) {
 		console.log("papa parse failed")
 		console.log(response)
-		x = response
+		csv = response
 	})
 	
 })
