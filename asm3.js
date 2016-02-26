@@ -272,13 +272,12 @@ $(document).ready(function(){
 			complete: function(results) {
 			console.log("Papa parse finished")
 			console.log(results)
-			csv_output = response
+			csv_output = results
 			}
 		})
 	}).fail(function(response) {
 		console.log("papa parse failed")
 		console.log(response)
-		csv_output = response
 	})
 	
 })
