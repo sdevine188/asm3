@@ -272,15 +272,15 @@ $(document).ready(function(){
 			console.log("Papa parse finished")
 			console.log(results)
 			x = response
-		}
-	})
+			}
+		})
 	}).fail(function(response) {
 		console.log("papa parse failed")
 		console.log(response)
 	})
 })
 	
-})
+
 
 
 
