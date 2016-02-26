@@ -269,7 +269,7 @@ $(document).ready(function(){
 		// console.log(response)
 		csv = response
 		Papa.parse(csv, {
-			header: true
+			header: true,
 			complete: function(results) {
 			console.log("Papa parse finished")
 			console.log(results)
