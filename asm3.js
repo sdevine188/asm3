@@ -253,7 +253,7 @@ $(document).ready(function(){
   		graph_naics($(this).val())
 	})
 
-	var file = "census_fips_state_county.csv"
+	var file = "https://sdevine188.github.io/asm3/census_fips_state_county.csv"
 
 	Papa.parse(file, {
 	complete: function(results) {
