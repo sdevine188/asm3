@@ -1,5 +1,5 @@
 var x = []
-var csv
+var csv = []
 
 $(document).ready(function(){
 
