@@ -254,6 +254,8 @@ $(document).ready(function(){
 	})
 
 	var url = "https://sdevine188.github.io/asm3/census_fips_state_county.csv"
+	var file = "census_fips_state_county.csv"
+
 
 	// Papa.parse(file, {
 	// complete: function(results) {
@@ -262,7 +264,7 @@ $(document).ready(function(){
 
 	$.ajax({
 		type: "GET",
-		url: url,
+		url: "census_fips_state_county.csv"
 		dataType: "text"
 	}).done(function(response) {
 		// console.log(response)
@@ -277,7 +279,9 @@ $(document).ready(function(){
 	}).fail(function(response) {
 		console.log("papa parse failed")
 		console.log(response)
+		x = response
 	})
+	
 })
 	
 
