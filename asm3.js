@@ -1,5 +1,5 @@
 var x = []
-var csv = []
+var csv_output = []
 
 $(document).ready(function(){
 
@@ -266,18 +266,18 @@ $(document).ready(function(){
 		dataType: "text"
 	}).done(function(response) {
 		// console.log(response)
-		csv = response
-		Papa.parse(x, {
+		var csv = response
+		Papa.parse(csv, {
 			complete: function(results) {
 			console.log("Papa parse finished")
 			console.log(results)
-			csv = response
+			csv_output = response
 			}
 		})
 	}).fail(function(response) {
 		console.log("papa parse failed")
 		console.log(response)
-		csv = response
+		csv_output = response
 	})
 	
 })
