@@ -59,7 +59,6 @@ $(document).ready(function(){
 	  }
 	  // return the results so they can be used by the next function
 	  x = results
-	  alert("this worked")
 	  return results;
 	}
 
@@ -254,6 +253,13 @@ $(document).ready(function(){
   		graph_naics($(this).val())
 	})
 
+	var file = "census_fips_state_county.csv"
+
+	Papa.parse(file, {
+	complete: function(results) {
+		console.log("Finished:", results.data);
+	}
+})
 	
 })
 
