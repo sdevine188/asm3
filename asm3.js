@@ -274,7 +274,9 @@ $(document).ready(function(){
 			console.log(results)
 			csv_output = results
 			console.log("try printing first array")
-			console.log(csv_output[1])
+			console.log(results[1])
+			console.log("try 2 printing first array")
+			console.log(results[1][1])
 			}
 		})
 	}).fail(function(response) {
