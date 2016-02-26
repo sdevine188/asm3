@@ -273,6 +273,8 @@ $(document).ready(function(){
 			console.log("Papa parse finished")
 			console.log(results)
 			csv_output = results
+			console.log("try printing first array")
+			console.log(csv_output[1][1])
 			}
 		})
 	}).fail(function(response) {
