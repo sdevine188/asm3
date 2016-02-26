@@ -281,6 +281,7 @@ $(document).ready(function(){
 			console.log(results.data)
 			console.log("try 4 printing first array")
 			console.log(results.data[1])
+			csv_output = results.data
 			}
 		})
 	}).fail(function(response) {
