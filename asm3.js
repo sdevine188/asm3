@@ -253,12 +253,31 @@ $(document).ready(function(){
   		graph_naics($(this).val())
 	})
 
-	var file = "https://sdevine188.github.io/asm3/census_fips_state_county.csv"
+	var url = "https://sdevine188.github.io/asm3/census_fips_state_county.csv"
 
-	Papa.parse(file, {
-	complete: function(results) {
-		console.log("Finished:", results.data);
-	}
+	// Papa.parse(file, {
+	// complete: function(results) {
+	// 	console.log("Finished:", results.data);
+	// }
+
+	$.ajax({
+		type: "GET",
+		url: url,
+		dataType: "text"
+	}).done(function(response) {
+		// console.log(response)
+		x = response
+		Papa.parse(x, {
+			complete: function(results) {
+			console.log("Papa parse finished")
+			console.log(results)
+			x = response
+		}
+	})
+	}).fail(function(response) {
+		console.log("papa parse failed")
+		console.log(response)
+	})
 })
 	
 })
